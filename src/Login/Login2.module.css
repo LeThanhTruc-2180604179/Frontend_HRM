@@ -1,0 +1,235 @@
+/* Thanh header cho giai đoạn 1 */
+
+/* Nút Login giai đoạn 2 (trạng thái mặc định - không sáng) */
+.loginButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #d3d3d3; /* Màu xám khi chưa nhập đủ thông tin */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginButton.active {
+    background-color: #00aaff; /* Màu xanh khi đã nhập đủ thông tin */
+    cursor: pointer;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .fullScreenContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  .videoBackground {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.8;
+  }
+  
+  .overlayText {
+    z-index: 2;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+  }
+  
+  .formContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .leftContainer {
+    position: relative;
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng bên trái */
+  }
+  
+  .rightContainer {
+    width: 35%;
+    background: linear-gradient(135deg, #d9e5f2, #f7e4e2, #e3eaf6);
+    padding: 40px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng bên trái */
+  }
+  
+  .title {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-left: 15px;
+  }
+  
+  .iconLarge {
+    font-size: 55px;
+    margin-right: 10px;
+  }
+  
+  .singleInputWrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  .singleInputWrapper input {
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f5f5f5;
+    padding-left: 40px;
+  }
+  
+  .singleInputWrapper input:focus {
+    border-color: #ff416c;
+  }
+  
+  .singleInputWrapper label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .singleInputWrapper input:focus + label,
+  .singleInputWrapper input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #333;
+    transform: translateY(-100%);
+  }
+  
+  .iconInside {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .errorBox {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .errorIcon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .recoverLink {
+    color: #721c24;
+    font-weight: bold;
+    margin-left: 5px;
+    text-decoration: underline;
+  }
+  
+  .recoverLink:hover {
+    color: #501414;
+  }
+  
+  .backButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff4e79;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .backButton:hover {
+    background-color: #ff6ba7;
+  }
+  
+  .backButton .icon {
+    margin-right: 8px;
+  }
+  
+  .forgotPasswordRight {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #00aaff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .forgotPasswordRight:hover {
+    color: #0077cc;
+  }
+  

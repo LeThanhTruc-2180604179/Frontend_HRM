@@ -1,0 +1,511 @@
+/* Content.module.css */
+
+.dashboard-container {
+  background: rgb(236, 234, 234);
+  padding: 30px 23px 142px; /* Kết hợp padding-top và các padding khác */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%; /* Đảm bảo chiếm đầy đủ chiều rộng */
+  box-sizing: border-box; /* Bao gồm padding trong tính toán chiều rộng */
+}
+
+.welcome-header {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 30px;
+  width: 100%; /* Đảm bảo chiếm đầy đủ chiều rộng */
+  background-color: white;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.welcome-text {
+  font-size: 16px;
+  color: #21252b;
+  font-weight: 600;
+}
+
+.date-text {
+  color: #848d9a;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 4px;
+  margin-left: 40px;
+}
+
+.horizontal-card-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: nowrap; /* Ngăn không cho thẻ wrap xuống dòng khác */
+  justify-content: space-between; /* Phân phối không gian đều giữa các thẻ */
+  width: 100%; /* Đảm bảo chiếm đầy đủ chiều rộng của cha */
+  overflow-x: auto; /* Cho phép cuộn ngang nếu cần */
+}
+
+.meeting-count-card,
+.department-count-card,
+.position-count-card,
+.evaluation-count-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px; /* Điều chỉnh padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1; /* Cho phép thẻ co giãn đều */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px; /* Tùy chọn: Ngăn thẻ trở nên quá nhỏ */
+}
+
+.meeting-count-card .icon-container {
+  color: #2DD4BF; /* Màu sắc mới cho biểu tượng cuộc họp */
+}
+
+.meeting-count-card .icon-container svg {
+  font-size: 32px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content span {
+  font-size: 14px;
+  color: #657081;
+  margin-bottom: 4px;
+}
+
+.card-content h2 {
+  font-size: 24px;
+  color: #071631;
+  margin: 0;
+}
+
+.icon-container {
+  font-size: 32px;
+  color: #5cb85c;
+}
+
+.department-count-card .icon-container {
+  color: #f0ad4e;
+}
+
+.position-count-card .icon-container {
+  color: #5cb85c;
+}
+
+.evaluation-count-card .icon-container {
+  color: #d9534f;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+
+.progress-card,
+.classification-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.classification-card {
+  /* Thêm các kiểu khác nếu cần */
+}
+
+.progress-header,
+.classification-header {
+  display: flex;
+  gap: 16px;
+}
+
+.progress-title,
+.classification-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-heading,
+.classification-heading {
+  font-size: 18px;
+  color: #21252b;
+  margin: 0;
+}
+
+.progress-date,
+.classification-date {
+  font-size: 12px;
+  color: #848d9a;
+  margin-top: 4px;
+}
+
+.chart-container {
+  margin-top: 20px; /* Điều chỉnh khoảng cách trên */
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /* Thêm các thuộc tính mới để kiểm soát kích thước */
+  width: 300px; /* Chiều rộng mới cho biểu đồ */
+  height: 300px; /* Chiều cao mới cho biểu đồ */
+  margin-left: 10px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 10px;
+  font: 500 10px 'Inter', sans-serif;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.evaluation-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluation-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Đảm bảo chiếm đầy đủ chiều cao */
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.header-title h2 {
+  font-size: 18px;
+  color: #21252b;
+}
+
+.header-title p {
+  font-size: 12px;
+  color: #848d9a;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.action-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.action-button:hover {
+  background: #e9ecef;
+}
+
+.metrics-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  padding: 0 40px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  border-radius: 8px;
+  border: 1px dashed #e6e7ea;
+  padding: 8px 16px;
+  text-align: center;
+  min-width: 160px;
+}
+
+.metric-label {
+  color: #848d9a;
+  font-size: 10px;
+}
+
+.metric-value {
+  color: #071631;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.evaluation-table {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d3d3d3; /* Viền đen nhạt */
+  border-radius: 12px; /* Vát cong các góc */
+  background-color: #fff; /* Màu nền trắng cho bảng */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
+}
+
+.table-header {
+  background: #f8f9fa; /* Màu nền cho tiêu đề bảng */
+  padding: 12px 0;
+  display: flex;
+  color: #657081;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06px;
+  border-bottom: 1px solid #d3d3d3; /* Viền dưới cho tiêu đề */
+  border-top-left-radius: 12px; /* Vát cong góc trên bên trái */
+  border-top-right-radius: 12px; /* Vát cong góc trên bên phải */
+}
+
+.table-cell {
+  flex: 1;
+  padding: 8px 16px; /* Tăng padding cho các ô */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Căn giữa nội dung */
+  font-size: 14px; /* Tăng kích thước font cho dễ đọc */
+  color: #333; /* Màu chữ tối hơn */
+}
+
+.table-row:last-child {
+  border-bottom: none; /* Loại bỏ viền dưới hàng cuối cùng */
+}
+
+.table-row:nth-child(odd) {
+  background-color: #f9f9f9; /* Màu nền cho hàng lẻ */
+}
+
+.table-row:nth-child(even) {
+  background-color: #ffffff; /* Màu nền cho hàng chẵn */
+}
+
+.table-row {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e6e7ea;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 10px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pageButton:hover {
+  background-color: #ddd;
+}
+
+.activePage {
+  background-color: #5cb85c;
+  color: #fff;
+  border-color: #5cb85c;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Search and Filter Container */
+.search-filter-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 0 24px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 8px 12px;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.search-icon {
+  color: #657081;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.filter-icon {
+  color: #657081;
+  margin-right: 8px;
+}
+
+.filter-select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-select option {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .horizontal-card-container {
+    gap: 15px; /* Giảm khoảng cách nếu cần */
+  }
+
+  .meeting-count-card,
+  .department-count-card,
+  .position-count-card,
+  .evaluation-count-card {
+    min-width: 150px; /* Điều chỉnh min-width nếu cần */
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .horizontal-card-container {
+    gap: 10px; /* Giảm khoảng cách thêm cho màn hình rất nhỏ */
+  }
+
+  .meeting-count-card,
+  .department-count-card,
+  .position-count-card,
+  .evaluation-count-card {
+    min-width: 120px; /* Điều chỉnh min-width cho màn hình rất nhỏ */
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left-section,
+  .evaluation-section {
+    width: 100%;
+  }
+
+  .metrics-container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .search-bar,
+  .filter-dropdown {
+    width: 100%;
+  }
+
+  .progress-card,
+  .classification-card,
+  .evaluation-card {
+    padding: 16px;
+  }
+}

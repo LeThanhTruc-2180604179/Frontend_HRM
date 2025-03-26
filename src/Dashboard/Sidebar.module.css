@@ -1,0 +1,104 @@
+.sidebar {
+  height: 100vh;
+  background-color: #2f3c48; 
+  color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  position: fixed;
+  top: 60px; /* Vì header cao 60px */
+  left: 0;
+  z-index: 1000;
+}
+
+.open {
+  width: 200px;
+}
+
+.closed {
+  width: 80px;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #3b4a59;
+}
+
+/* Màu cam cho item đang active */
+.activeItem {
+  background-color: #ff9800; /* Màu cam */
+  font-weight: bold;
+}
+
+.navLink svg {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.subMenu {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+  display: none;
+}
+
+.subMenuOpen {
+  display: block;
+}
+
+.subMenuItem {
+  padding: 8px 20px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.subMenuItem:hover {
+  color: #ffffff;
+}
+
+/* Khi sidebar thu gọn, submenu sẽ hiển thị dạng pop-out */
+.subMenuClosed {
+  position: fixed;
+  top: 60px; 
+  left: 80px; 
+  background-color: #111827;
+  width: 200px;
+  z-index: 1100;
+  display: none;
+}
+
+.navItem:hover .subMenuClosed {
+  display: block;
+  top: calc(60px + (var(--nav-item-index) * 50px));
+}
+
+.open .subMenuClosed {
+  display: none;
+}

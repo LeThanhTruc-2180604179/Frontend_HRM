@@ -1,0 +1,178 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modalContent {
+  background: #ffffff;
+  width: 800px;
+  max-width: 95%;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.modalLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.leftColumn {
+  flex: 0 0 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.employeeName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.position {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.infoSection {
+  display: flex;
+  /* Trước đây có thể bạn đặt gap lớn, giờ giảm xuống */
+  gap: 20px;
+  justify-content: flex-start; /* Đẩy hai cột sát nhau hơn */
+}
+
+.infoBlock {
+  flex: 0 0 auto;  /* Hoặc flex: initial; */
+  width: auto; /* Có thể giới hạn lại, ví dụ: width: 200px; nếu muốn */
+  margin-left: 30px;
+}
+.infoBlock h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.infoBlock p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.jobSection {
+  margin-top: 20px;
+  
+}
+
+.jobSection h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+.jobDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.jobInfoColumn {
+  flex: 1;
+}
+
+.departmentList {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.departmentList li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.departmentDot {
+  width: 10px;
+  height: 10px;
+  background: #2ecc71;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.jobExtraInfo {
+  flex: 1;
+ 
+  margin-right: 20px;
+}
+
+.jobExtraInfo p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.statusActive {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.statusDeleted {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}

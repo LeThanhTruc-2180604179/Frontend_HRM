@@ -1,0 +1,566 @@
+.wrapper {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+ 
+  background: rgb(236, 234, 234);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.cancelButton {
+  padding: 10px 20px;
+  color: white;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: #c82333;
+}
+
+/* Header Card */
+.headerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerLeft {
+  max-width: 50%;
+  margin-left: 30px;
+}
+
+.headerLeft h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #333;
+}
+
+.headerLeft h1 span {
+  color: #28a745;
+}
+
+.headerSubtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.headerRight {
+  max-width: 40%;
+  text-align: right;
+}
+
+.headerImage {
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 100px;
+}
+
+.addDocumentButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.addDocumentButton:hover {
+  background-color: #218838;
+}
+
+/* Search box outer */
+.searchBoxOuter {
+  margin-bottom: 20px;
+}
+
+.searchBoxContainer {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 8px 8px 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.searchInput:focus {
+  border-color: #007bff;
+}
+
+/* No files state */
+.noFilesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.noFilesContent {
+  text-align: center;
+}
+
+.noFilesImage {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.noFilesText {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.noteText {
+  font-size: 14px;
+  color: #666;
+}
+
+/* File List Card */
+.fileListCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  /* height: auto thay vì fixed height */
+  height: 500px; 
+  display: flex;
+  flex-direction: column;
+  overflow: visible; /* Cho phép hiển thị tràn ra */
+}
+
+.fileListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fileListHeader h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.fileCountBadge {
+  background: #e0f4e4;
+  color: #28a745;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* File Items */
+.fileItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* Xoá overflow-y: auto; để không có thanh cuộn nội bộ */
+  /* overflow-y: auto; */
+  overflow: visible;
+  flex-grow: 1;
+}
+
+.fileItems::-webkit-scrollbar {
+  width: 6px;
+}
+
+.fileItems::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  position: relative;
+}
+
+.fileItem:last-child {
+  border-bottom: none;
+}
+
+.fileIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.fileNameContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fileName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileSize {
+  font-size: 12px;
+  color: #666;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.dropbtn:hover {
+  color: #007bff;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute; /* hoặc fixed */
+  width: 120px;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent button {
+  display: block;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdownContent button:hover {
+  background: #f1f1f1;
+  color: #007bff;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.pageButton {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.activePage {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Upload card */
+.uploadCard {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #fafafa;
+  margin-top: 20px;
+  height: 500px;
+}
+
+.uploadIcon {
+  font-size: 60px;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+.fileDropArea {
+  margin-bottom: 10px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileLabel {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fileLabel:hover {
+  background-color: #0056b3;
+}
+
+.uploadButton {
+  padding: 10px 20px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.uploadButton:hover {
+  background-color: #218838;
+}
+
+.cancelButton {
+  padding: 10px 20px;
+  color: white;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: #c82333;
+}
+
+.selectedFileContainer {
+  text-align: center;
+}
+
+.selectedFile {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modalClose {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modalClose:hover {
+  color: #f44336;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.primaryButton {
+  background: #007bff;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: #0056b3;
+}
+
+.secondaryButton {
+  background: #f44336;
+  color: white;
+}
+
+.secondaryButton:hover {
+  background: #d32f2f;
+}
+
+.loadingContainer {
+  text-align: center;
+}
+
+.loadingSpinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #007bff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.successContainer {
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 60px;
+  color: #28a745;
+}
+
+.successContainer p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+button {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}

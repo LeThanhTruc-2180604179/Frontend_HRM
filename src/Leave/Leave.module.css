@@ -1,0 +1,800 @@
+:root {
+    --font-primary: 'Inter', 'Roboto', sans-serif;
+    --color-text: #212121;
+    --color-subtext: #515151;
+    --color-border: #e2e2e2;
+    --color-background: #ffffff;
+    --color-primary: #3b82f6;
+    --color-danger: #ff7070;
+    --color-badge-sick-bg: #DFF5EC; 
+    --color-badge-sick-text: #6AD79E;
+    --color-badge-annual-bg: #FDF1DF;
+    --color-badge-annual-text: #F7C67E;
+    --color-badge-pending-bg: #FFE6E6;
+    --color-badge-pending-text: #FFA8A8;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background: #f8f9fc;
+    color: var(--color-text);
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ================== CHẾ ĐỘ NHÂN VIÊN ================== */
+.employeeWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: var(--color-background);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leftColumn {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.formTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.formGroup,
+.formGroupRow {
+    margin-bottom: 20px;
+}
+
+.formGroupRow {
+    display: flex;
+    gap: 20px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-subtext);
+}
+
+.formGroup input[type="datetime-local"],
+.formGroup select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--color-text);
+    background: #fff;
+}
+
+.formGroup textarea {
+    width: 100%;
+    height: 130px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    color: var(--color-text);
+    background: #E7EDF9; 
+    resize: none;
+}
+
+.formGroup textarea::placeholder {
+    color: #9a9a9a;
+}
+
+.dropArea {
+    border: 1px dashed #cccccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    background: #fafafa;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropArea:hover {
+    background: #f0f0f0;
+}
+
+.fileLabel {
+    display: inline-block;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submitButton {
+    background: #6366f1;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: 285px;
+}
+
+.submitButton:hover {
+    background: #4f52d8;
+}
+
+/* Cột phải */
+.rightColumn {
+    flex: 1.8;
+    padding-left: 40px;
+    border-left: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.remainInfo {
+    margin-top: 40px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.infoCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.infoCol p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-subtext);
+    margin-bottom: 5px;
+}
+
+.infoBadge {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.badgeSick {
+    background: var(--color-badge-sick-bg);
+    color: var(--color-badge-sick-text);
+}
+
+.badgeAnnual {
+    background: var(--color-badge-annual-bg);
+    color: var(--color-badge-annual-text);
+}
+
+.badgePending {
+    background: var(--color-badge-pending-bg);
+    color: var(--color-badge-pending-text);
+}
+
+.requestListSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 500px;
+}
+
+.requestListSection h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.searchArea {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.searchArea input {
+    width: 100%;
+    padding: 8px 36px 8px 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+}
+
+.tableContainer {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 500px; 
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.requestTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+.requestTable thead th {
+    font-weight: 600;
+    background: #f6f7fa;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: var(--color-text);
+}
+
+.requestTable tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.cancelButton {
+    background: #ff7070;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.cancelButton:hover {
+    background: #ff5050;
+}
+
+.switchMode {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.toggleButton {
+    background: #ccc;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggleButton:hover {
+    background: #bbbbbb;
+}
+
+.noRequests {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    .employeeWrapper {
+        flex-direction: column;
+    }
+
+    .leftColumn,
+    .rightColumn {
+        padding: 0;
+        border: none;
+    }
+
+    .rightColumn {
+        padding-top: 20px;
+        border-top: 1px solid #e2e2e2;
+    }
+
+    .formGroupRow {
+        flex-direction: column;
+    }
+
+    .tableContainer {
+        max-height: 300px;
+    }
+}
+
+/* ================== CHẾ ĐỘ QUẢN LÝ ================== */
+
+/* Bố cục chế độ quản lý có sidebar bên trái */
+.managerModeContainer {
+    display: flex;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+ 
+}
+
+.managerSidebar {
+    width: 250px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.managerSidebar h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navList li {
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.navList li:hover {
+    background: #f1f1f1;
+}
+
+.active {
+    background: #8ab38c !important;
+    color: #fff !important;
+}
+
+.toggleButtonBack {
+    background: #ccc;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.toggleButtonBack:hover {
+    background: #bbbbbb;
+}
+
+.managerMainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.managerTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.departmentInfo {
+    font-size: 14px;
+    color: var(--color-subtext);
+    margin-bottom: 20px;
+}
+
+.managerContent {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.leftPanel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.filterRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filterGroup {
+    position: relative;
+}
+
+.filterBtn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    min-width: 120px;
+    text-align: left;
+}
+
+.filterBtn:hover {
+    background: #e4e4e4;
+}
+
+.dropdown {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+    min-width: 120px;
+    z-index: 10;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filterGroup:hover .dropdown {
+    display: block;
+}
+
+.dropdown div {
+    padding: 8px 10px;
+    color: #333;
+}
+
+.dropdown div:hover {
+    background: #f0f0f0;
+}
+
+.searchWrapper {
+    flex: 1;
+}
+
+.searchWrapper input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.requestListTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.requestTableManager {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+.requestTableManager thead th {
+    font-weight: 600;
+    background: #f6f7fa;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: var(--color-text);
+}
+
+.requestTableManager tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.viewButton {
+    background: #ccc;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.viewButton:hover {
+    background: #bbbbbb;
+}
+
+.rightPanel {
+    flex: 1;
+    background: #F8F9FC;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #ddd;
+}
+
+.employeeInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employeeInfo span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.rejectBtn {
+    background: #ff7070;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.rejectBtn:hover {
+    background: #ff5050;
+}
+
+.approveBtn {
+    background: #6AD79E;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.approveBtn:hover {
+    background: #58c287;
+}
+
+.reasonBox, .evidenceBox {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.reasonBox h4,
+.evidenceBox h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.reasonBox p,
+.evidenceBox p {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+
+.evidenceImageManager {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.placeholderBox {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+.section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ============ CHẾ ĐỘ QUẢN LÝ - CÁC FORM PHỤ ============ */
+.managerAdvanced {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.managerAdvanced h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: var(--color-text);
+}
+
+.managerAdvanced .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.managerAdvanced .formGroup label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-subtext);
+}
+
+.managerAdvanced .formGroup input[type="text"],
+.managerAdvanced .formGroup input[type="number"],
+.managerAdvanced .formGroup input[type="datetime-local"],
+.managerAdvanced .formGroup select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--color-text);
+    background: #fff;
+}
+
+.managerAdvanced .buttonGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.managerAdvanced button {
+    background: #ccc;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.managerAdvanced button:hover {
+    background: #bbbbbb;
+}
+
+.managerAdvanced .statsResult {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.managerAdvanced .statsResult h4 {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.managerAdvanced .statsResult p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.managerAdvanced .tableContainer {
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background: #fff;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.managerAdvanced .tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+.managerAdvanced .tableContainer table thead th {
+    background: #f6f7fa;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: var(--color-text);
+}
+
+.managerAdvanced .tableContainer table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.managerAdvanced .tableContainer h4 {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.managerAdvanced .statsResult button {
+    margin-top: 10px;
+    background: var(--color-primary);
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.managerAdvanced .statsResult button:hover {
+    background: #2f69d9;
+}
+
+@media (max-width: 1200px) {
+    .managerContainer {
+        padding: 10px;
+    }
+
+    .managerAdvanced {
+        padding: 15px;
+    }
+}
+
+.charCounter {
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+    margin-top: 5px;
+}

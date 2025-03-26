@@ -1,0 +1,248 @@
+:root {
+    --main-bg: #f9eade; /* Màu nền nhạt cho cột trái */
+    --border-color: #ccc;
+    --primary-text: #333;
+    --accent-color: #d68f59;
+    --secondary-bg: #fff;
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --input-border: #ccc;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: var(--primary-text);
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.leftColumn {
+    background: var(--main-bg);
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+}
+
+.leftTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formLabel {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.formControl {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.formControl::placeholder {
+    color: #999;
+}
+
+.illustrationWrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.illustrationImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.rightColumn {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--secondary-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.rightTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #fff;
+    height: 400px;
+}
+
+.tableWrapperFixedHeight {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #fff;
+    overflow: auto;
+    height: 400px; /* Cố định chiều cao bảng */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table th {
+    text-align: left;
+    padding: 10px;
+    background: #fafafa;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+.menuButton {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.menuButton:hover {
+    background: #e2e2e2;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-width: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 9999; /* Đảm bảo dropdown nằm trên cùng */
+}
+
+.dropdownMenu li {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.dropdownMenu li:hover {
+    background: #eee;
+}
+
+.filterRow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.searchInput {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filterSelect {
+    width: 120px;
+}
+
+.countLabel {
+    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.questionBlock {
+    background: #fafafa;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.checkboxContainer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.checkboxInput {
+    margin-right: 5px;
+}
+
+.checkboxLabel {
+    font-size: 0.9rem;
+}
+
+.actionButtonsRight {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.saveBtn {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.saveBtn:hover {
+    background: #bf7a47;
+}
+
+.cancelBtn {
+    background: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cancelBtn:hover {
+    background: #b0b0b0;
+}

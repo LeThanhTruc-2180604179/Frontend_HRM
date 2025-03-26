@@ -1,0 +1,105 @@
+.customHeader {
+  height: 60px;
+  padding: 0 20px;
+  background-color: #232f3e; /* Nền tối */
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customLogo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brandText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menuIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: margin-left 0.3s ease;
+}
+
+.menuOpen {
+  margin-left: 0px;
+}
+
+.searchForm {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.searchForm input {
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+  flex: 1;
+  color: #333;
+}
+
+.searchForm button {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.notificationGroup {
+  display: flex;
+  align-items: center;
+}
+
+.iconLink {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.userMenuLink {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.userAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+.adminText {
+  color: #fff;
+  margin: 0 5px;
+}
+
+.iconDropdown {
+  color: #fff;
+  margin-left: 5px;
+}
+
+.dropdownMenu {
+  background-color: #fff;
+  border-radius: 4px;
+  min-width: 150px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}

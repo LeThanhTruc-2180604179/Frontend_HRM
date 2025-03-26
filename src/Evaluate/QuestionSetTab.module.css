@@ -1,0 +1,205 @@
+:root {
+    --main-bg: #f9eade; /* Màu nền nhạt cho cột trái */
+    --border-color: #ccc;
+    --primary-text: #333;
+    --accent-color: #d68f59;
+    --secondary-bg: #fff;
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --input-border: #ccc;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: var(--primary-text);
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.leftColumn {
+    background: var(--main-bg);
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+}
+
+.leftTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.tableWrapper {
+    overflow: auto;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #fff;
+    height: 500px;
+}
+
+.rightColumn {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--secondary-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.rightTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.tableWrapperFixedHeight {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #fff;
+    overflow: auto;
+    height: 400px; /* Cố định chiều cao bảng */
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table th {
+    text-align: left;
+    padding: 10px;
+    background: #fafafa;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+.rowEven {
+    background: #fff;
+}
+.rowOdd {
+    background: #f9f9f9;
+}
+
+.menuButton {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.menuButton:hover {
+    background: #e2e2e2;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-width: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 9999; 
+}
+
+.dropdownMenu li {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.dropdownMenu li:hover {
+    background: #eee;
+}
+
+.formControl {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.formControl::placeholder {
+    color: #999;
+}
+
+.actionButtonsRight {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.saveBtn {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.saveBtn:hover {
+    background: #bf7a47;
+}
+
+.cancelBtn {
+    background: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cancelBtn:hover {
+    background: #b0b0b0;
+}
+
+.deleteBtn {
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.deleteBtn:hover {
+    background: #cc0000;
+}

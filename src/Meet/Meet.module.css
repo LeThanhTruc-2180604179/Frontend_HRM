@@ -1,0 +1,375 @@
+:root {
+  --main-bg: #f9eade;
+  --border-color: #ccc;
+  --primary-text: #333;
+  --accent-color: #d68f59;
+  --secondary-bg: #fff;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --input-border: #ccc;
+  --hover-color: #e2e2e2;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --muted-color: #6c757d;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: var(--font-family);
+  color: var(--primary-text);
+  background: var(--secondary-bg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: var(--main-bg);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  gap: 10px;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex: 1;
+  color: #333;
+}
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.infoIcon {
+  font-size: 1.2rem;
+  color: var(--info-color);
+  cursor: pointer;
+}
+
+.tooltipContainer:hover .tooltipContent {
+  display: block;
+}
+
+.tooltipContent {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  width: 250px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 9999;
+}
+
+.tooltipContent h5 {
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--primary-text);
+}
+
+.tooltipContent p {
+  margin: 5px 0;
+  color: var(--primary-text);
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background: #f5f5f5;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.sidebarButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #555;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebarButton:last-child {
+  margin-bottom: 0;
+}
+
+.sidebarButton:hover {
+  background: var(--hover-color);
+}
+
+.sidebarActive {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.iconMargin {
+  margin-right: 8px;
+}
+
+.mainContent {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: var(--secondary-bg);
+}
+
+.section {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.formModal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formLabel {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formControl {
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.modalFooter {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.saveBtn, .cancelBtn, .actionButton {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.2s;
+}
+
+.cancelBtn {
+  background: var(--muted-color);
+}
+
+.actionButton:hover, .saveBtn:hover, .cancelBtn:hover {
+  background: #bf7a47;
+}
+
+.deleteBtn {
+  background: var(--danger-color);
+}
+
+.deleteBtn:hover {
+  background: #c12d3c;
+}
+
+.successBtn {
+  background: var(--success-color);
+}
+
+.successBtn:hover {
+  background: #218838;
+}
+
+.infoBtn {
+  background: var(--info-color);
+}
+
+.infoBtn:hover {
+  background: #138496;
+}
+
+.tableWrapper {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fff;
+  overflow: auto;
+  max-height: 700px;
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 10px;
+  background: #fafafa;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.infoText {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Cuộn mềm mại */
+.tableWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hiệu ứng hover trên dòng table */
+.table tbody tr:hover {
+  background: #f7f7f7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+  .sidebarButton {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+  .tooltipContent {
+    width: 200px;
+  }
+  .formControl {
+    font-size: 0.8rem;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  position: absolute;
+  right: 0;
+  background-color: var(--secondary-bg);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdownItem {
+  color: var(--primary-text);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dropdownItem:hover {
+  background-color: var(--hover-color);
+}
+
+.dropdownItem svg {
+  margin-right: 5px;
+}
+
+/* Đảm bảo rằng dropdown không che các phần tử khác */
+.dropdownContent {
+  display: block;
+}
+
+/* Thêm các kiểu cho nút "Hủy" trong form Thêm người dùng */
+.section .modalFooter {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Disabled Button Style */
+.disabledBtn {
+  background: var(--muted-color);
+  cursor: not-allowed;
+}
+
+.disabledBtn:hover {
+  background: var(--muted-color);
+}

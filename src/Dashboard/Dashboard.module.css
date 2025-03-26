@@ -1,0 +1,89 @@
+/* CSS cho sidebar và content ở Dashboard */
+
+.sidebar {
+    overflow-y: auto; /* Chỉ cuộn dọc bên trong Sidebar */
+    position: fixed;
+    background-color: #343a40;  /* Màu nền */
+    color: #fff;  /* Màu chữ */
+    height: 100vh;  /* Sidebar chiếm toàn bộ chiều cao */
+    padding: 10px;  /* Khoảng cách padding */
+    transition: width 0.3s ease;  /* Hiệu ứng thay đổi kích thước sidebar */
+    left: 0;
+    top: 0;
+    z-index: 1000;  /* Đảm bảo sidebar luôn nằm trên */
+}
+
+.open {
+    width: 175px;  /* Chiều rộng khi sidebar mở */
+}
+
+.closed {
+    width: 60px;  /* Chiều rộng khi sidebar đóng */
+}
+
+.nav-link {
+    display: flex;  /* Hiển thị các phần tử theo hàng ngang */
+    align-items: center;  /* Căn chỉnh các phần tử theo chiều dọc */
+    padding: 5px 0;  /* Giảm padding giữa các dòng */
+    transition: padding 0.3s ease; /* Thêm hiệu ứng chuyển động cho padding */
+}
+
+.me-2 {
+    margin-right: 20px !important;  /* Khoảng cách giữa icon và chữ */
+    transition: margin-right 0.3s ease !important;  /* Hiệu ứng di chuyển icon */
+}
+
+/* Khi Sidebar đóng, giảm margin của các icon */
+.closed .nav-link .me-2 {
+    margin-right: -100px !important;  /* Đặt icon về sát mép trái khi sidebar đóng */
+    justify-content: center; /* Căn giữa icon trong sidebar khi đóng */
+}
+
+/* Nội dung chính */
+.content {
+    transition: margin-left 0.3s ease;  /* Thêm hiệu ứng di chuyển khi sidebar mở/đóng */
+    padding-bottom: 5px;
+    background:  rgb(236, 234, 234); /* Màu nền gradient cho phần nội dung chính */
+    min-height: 100vh; /* Đảm bảo nội dung chính chiếm toàn bộ chiều cao */
+}
+
+.content.open {
+    margin-left: 175px;  /* Điều chỉnh nội dung khi sidebar mở */
+}
+
+.content.closed {
+    margin-left: 60px;  /* Điều chỉnh nội dung khi sidebar đóng */
+}
+/* Dashboard.module.css */
+
+.dashboardContainer {
+    display: flex;
+    height: 100vh; /* Chiếm toàn bộ chiều cao viewport */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .open {
+    margin-left: 0; /* Khi sidebar mở */
+  }
+  
+  .closed {
+    margin-left: -250px; /* Ẩn sidebar bằng cách dịch chuyển trái */
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding-top:0px;
+    padding-left:40px;
+    padding-right: 20px;
+    overflow-y: auto;
+    margin-top: 3rem;
+
+    
+  }
+  
